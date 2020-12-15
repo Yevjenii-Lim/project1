@@ -1,0 +1,45 @@
+.anchors {
+    .container {
+        .anchors__wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 40px;
+            flex-wrap: wrap;
+        }
+        h2 {
+            margin-bottom: 3em;
+        }
+        .anchor {
+            background-color: #333333;
+            width: 330px;
+            height: 360px;
+            position: relative;
+            margin-bottom: 5em;
+            p, img   {
+                margin: 0;
+            }
+            &__text {
+                margin: 0;
+                color: white;
+                padding: 1.4em;
+            }
+            .title {
+                color: #FDD216;
+                margin-bottom: 1em;
+            }
+            &__icon {
+                background-color: #FFDD0B;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                top: -15%;
+                left: -15%;
+                border: 5px solid white;
+            }
+        }
+    }
+}
