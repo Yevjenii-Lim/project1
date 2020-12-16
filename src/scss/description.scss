@@ -3,33 +3,71 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 2em;
+    @media only screen and (max-width: $break-point4) {
+      flex-direction: column;
+    }
     .main__text {
       max-width: 65%;
       .title {
         font-size: 30px;
-        font-weight: bold;
+        font-weight: bolder;
       }
       .article {
         &__title {
           color: #fdd216;
+          font-weight: lighter;
+          font-size: 1.4em;
+          letter-spacing:  -1px;
+         
         }
         .text--yelow {
           color: #fdd216;
           font-weight: bold;
         }
       }
+      @media only screen and (max-width: $break-point4)  {
+        max-width: 100%;
+      }
     }
     .cards {
+      @media only screen and (max-width: $break-point10) {
+        flex-direction: column;
+        align-items: center;
+      }
       .card {
         margin-left: auto;
         max-width: 80%;
         padding: 1em 2em;
         background-color: #ffdd0b;
+        @media only screen and (max-width: $break-point4) {
+         width: 45%;
+         margin-left: 0;
+          margin-top: 0;
+        }
+
+        @media only screen and (max-width: $break-point10) {
+          max-width: 100%;
+          width: 100%;
+        }
       }
       .card--grey {
         margin-top: 1.4em;
         background-color: #e6e6e6;
+        @media only screen and (max-width: $break-point4) {
+          margin-top: 0;
+        }
+        @media only screen and (max-width: $break-point10) {
+          margin-top: 1.4em;
+        }
       }
+     
+      @media only screen and (max-width: $break-point4) {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+      }
+ 
+    
     }
   }
 }
@@ -38,10 +76,25 @@
   background-color: #ffdd0b;
   position: relative;
   margin-bottom: 3em;
+  @media only screen and (max-width: $break-point1) {
+    height: 150px;
+    display: flex;
+    align-items: center;
+  }
   .container {
+    @media only screen and (max-width: $break-point1) {
+      max-width: 1000px;
+    }
+    @media only screen and (max-width: $break-point3) {
+      max-width: 800px;
+    } 
+    @media only screen and (max-width: $break-point9) {
+      flex-direction: column;
+    }
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     .content {
         .title {
             font-size: 1.1em;
@@ -61,6 +114,12 @@
         .active {
             background-color: white;
         }
+        @media only screen and (max-width: $break-point3) {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -100%;
+        }
       }
     }
     .slider-button {
@@ -69,8 +128,8 @@
         font-size: .9em;
         cursor: pointer;
         font-weight: bold;
-        
     }
+   
   }
   .chevron-left,
   .chevron-right {

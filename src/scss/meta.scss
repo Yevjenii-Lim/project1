@@ -1,0 +1,44 @@
+.meta-info {
+    padding: 5em 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: $break-point9) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .search {
+            width: 45%;
+            @media only screen and (max-width: $break-point9) {
+                width: 100%;
+            }
+        }
+        .search:last-child {
+            @media only screen and (max-width: $break-point9) {
+                margin-top: 2em;
+            }
+        }
+        .head {
+            display: flex;
+            align-items: center;
+            .icon {
+                width: 70px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #FFDD0B;
+                border-radius: 50%;
+                margin-right: 30px;
+            }
+        }
+        .text {
+            margin: 2em 0;
+        }
+        .button--yellow {
+            background-color: #FFDD0B;
+            padding: 1em 2em;
+            font-weight: bold;
+        }
+    }
+}

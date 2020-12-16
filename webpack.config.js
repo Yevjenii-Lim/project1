@@ -89,7 +89,19 @@ module.exports = {
           }
         }
       ]
-    }]
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name].[ext]',
+          }
+        },
+      ],
+    },
+  ]
   },
   plugins: [
     new CleanWebpackPlugin(),

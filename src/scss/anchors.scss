@@ -5,19 +5,60 @@
             justify-content: space-between;
             margin-left: 40px;
             flex-wrap: wrap;
+            @media only screen and (max-width: $break-point3) {
+                margin-left: 0;
+            }
+            @media only screen and (max-width: $break-point10) {
+                flex-direction: column;
+            }
         }
         h2 {
             margin-bottom: 3em;
+            @media only screen and (max-width: $break-point3) {
+                margin-bottom: 1em;
+            }
         }
         .anchor {
             background-color: #333333;
-            width: 330px;
-            height: 360px;
+            flex: 0 0 360px;
+          
             position: relative;
             margin-bottom: 5em;
+            padding-bottom: 20px;
+            @media only screen and (max-width: $break-point3) {
+                flex:0 0  48%;
+                margin-bottom: 1em;
+            }
+    
+    
             p, img   {
                 margin: 0;
             }
+            .anchor__img-wrap {
+                position: relative;
+                
+                @media only screen and (max-width: $break-point3) {
+                    height: 90px;
+                    overflow: hidden;
+                }
+               
+            }
+            &__img {
+                
+                height: 201px;
+                width: 361px;
+                @media only screen and (max-width: $break-point3) {
+                    width: 100%;
+                    height: 250px;
+                    margin-top: -10px;
+                    position: absolute;
+                    top: -150%;
+                }
+                @media only screen and (max-width: $break-point10) {
+                    height: 320px;
+                }
+            }
+          
             &__text {
                 margin: 0;
                 color: white;
@@ -39,6 +80,17 @@
                 top: -15%;
                 left: -15%;
                 border: 5px solid white;
+                z-index: 1;
+                @media only screen and (max-width: $break-point3) {
+                    width: 40px;
+                    height: 40px;
+                    top: 28%;
+                    left: 85%;
+                    border: none;
+                    svg {
+                        width: 50%;
+                    }
+                }
             }
         }
     }
