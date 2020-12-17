@@ -54,8 +54,13 @@
                     position: absolute;
                     top: -150%;
                 }
+               
                 @media only screen and (max-width: $break-point10) {
                     height: 320px;
+                } 
+                @media only screen and (max-width: $break-point14) {
+                    height: 200px;
+                    top: -42%;
                 }
             }
           
@@ -84,12 +89,18 @@
                 @media only screen and (max-width: $break-point3) {
                     width: 40px;
                     height: 40px;
-                    top: 28%;
+                    top: 25%;
                     left: 85%;
                     border: none;
                     svg {
                         width: 50%;
                     }
+                }
+                @media only screen and (max-width: $break-point10) {
+                    top: 27%;
+                }
+                @media only screen and (max-width: $break-point16) {
+                    top: 23%;
                 }
             }
         }

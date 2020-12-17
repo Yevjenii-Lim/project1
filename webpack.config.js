@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
-  entry: ['./src/scss/styles.scss'],
+  entry: ['./src/index.js'],
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),

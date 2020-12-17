@@ -22,6 +22,10 @@
         width: 100%;
         height: 10px;
         background-color: #FFDD0B;
+    }&__contacts {
+        @media only screen and (max-width: $break-point10) {
+            width: 100%;
+        }
     }
     .list-group {
         display: flex;
@@ -31,6 +35,9 @@
         }
         .inner-group {
             display: flex;
+            @media only screen and (max-width: $break-point10) {
+                width: 100%;
+            }
         }
     }
     .list-adress {
@@ -55,10 +62,13 @@
     }
     .services-list {
         @media only screen and (max-width: $break-point4) {
-            width: 30%;
+            width: 50%;
         }
         li {
             margin: 0.8em 0;
+        }
+        @media only screen and (max-width: $break-point10) {
+            width: 50%;
         }
     }
     .partners {
@@ -69,6 +79,7 @@
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 2em;
+        position: relative;
         @media only screen and (max-width: $break-point4) {
             flex-direction: row;
             border-left: none;
@@ -100,6 +111,19 @@
         }
         .social-wrap {
             display: flex;
+            @media only screen and (max-width: $break-point10) {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
+     
+    }
+    .footer__title {
+        @media only screen and (max-width: $break-point4) {
+            display: none;
+        }
+        
     }
 }

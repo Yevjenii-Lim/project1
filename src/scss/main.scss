@@ -22,7 +22,7 @@ body {
     display: none;
 }
 .mobileMenu {
-    z-index: 20;
+    z-index: 101;
     position: fixed;
     background-color: white;
     width: 40%;
@@ -31,20 +31,79 @@ body {
     flex-direction: column;
     transition: 0.3s;
     transform: translateX(-100%);
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    @media only screen and (max-width: $break-point11) {
+        width: 75%;
+    }
+    @media only screen and (max-width: $break-point11) {
+        width: 90%;
+    }
     &__logo{
         padding: 1em;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .close {
+            align-self: flex-start;
+        }
     }
     &__nav-list {
         list-style: none;
         margin-left: 0;
-        padding-left: 1em;
+        padding-left: 0;
         border-top: 1px solid #E6E6E6;
         padding-top: 1em;
+        position: absolute;
+        width: 100%;
+       background-color: white;
+        
         .mobileMenu__nav-list__item {
-            padding: 0.4em 0;
+            padding: 0.6em 1.4em;
+            display: flex;
+            align-items: center;
+            svg {
+                margin-left: 1em;
+            }
+      
+        }
+        .mobileMenu__nav-list__item:hover {
+            background-color: #FFDD0B;
+            
+        }
+     
+        
+    }
+    .inner-list-item {
+        margin-top: 1em;
+        background-color: #FFDD0B;     
+        padding: 0.6em 1.4em;  
+        display: flex;
+        align-items: center;
+        svg {
+            margin-right: 1em;
+        }
+        p   {
+            margin: 0;
+        }
+    }
+    .top__group {
+        position: relative;
+        .inner-list {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+            background-color: #FFFFFF;
+            z-index: 3;
+            li {
+                padding: 1em;
+                padding-left: 1.4em;
+            }
+            li:hover {
+                background-color: #E6E6E6;;
+            }
         }
     }
     .header__list--mobile {
@@ -61,7 +120,7 @@ body {
         .list__item {
             display: flex;
             align-items: center;
-            padding: 0.5em 0;
+            padding: 1em 0;
             p   {
                 margin: 0;
             }
@@ -79,6 +138,23 @@ body {
             justify-content: center;
             margin-left: auto;
         }
+    }
+}
+.bottom-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFDD0B;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    @media only screen and (max-width: $break-point9) {
+        display: flex;
+    }
+    p {
+        margin-left: 1em;
     }
 }
 .container {
@@ -127,12 +203,21 @@ body {
     @media only screen and (max-width: $break-point14) {
         max-width: 400px;
     }
+    @media only screen and (max-width: $break-point15) {
+        max-width: 350px;
+    }  
+    @media only screen and (max-width: $break-point16) {
+        max-width: 300px;
+    }
 }
 header {
     background-color: #FFDD0B;   
     display: flex;
     align-items: center;
     margin-bottom: 1em;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
     @media only screen and (max-width: $break-point9) {
         display: none;
     }
@@ -189,7 +274,10 @@ header {
 }
 .nav__bar {
     margin-bottom: 1.4em;
-    
+    padding-top: 5em;
+    @media only screen and (max-width: $break-point9) {
+        padding-top: 15px;
+    }
     .container {
         display: flex;
         align-items: center;
@@ -266,6 +354,7 @@ header {
                     top: 250%;
                     background-color: #FFFFFF;
                     display: none;
+                    z-index: 3;
                     li {
                         padding: 1em;
                     }
@@ -281,11 +370,38 @@ header {
 }
 
 
-.banner {
-    .banner {
-        max-width: 100%;
-    }
+
+.banner-img {
+    max-width: 100%;
+ 
 }
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
 
 .services {
     margin-bottom: 5em;
@@ -308,6 +424,7 @@ header {
         width: 190px;
         height: 270px;
         margin-top: -80px;
+        z-index: 1;
         @media only screen and (max-width: $break-point3) {
             width: 170px;
             margin-top: -60px;
@@ -326,11 +443,17 @@ header {
             justify-content: space-between;
             width: 90%;
             margin-left: 20px;
-            padding-left: 5em;
-            padding-right: 3em;
+            padding-left: 2em;
+            padding-right: 0;
             text-align: center;
             svg {
-                width: 30px;
+                flex: 0 0 30px;
+            }
+            .service__icon {
+                margin-right: 1em;
+                svg {
+                    width: 30px;
+                }
             }
             p {
                 margin-top: 0;
@@ -341,18 +464,30 @@ header {
             position: absolute;
             display: flex;
             align-items: center;
+            justify-content: center;
             color: white;
             transform: scale(0);
             background-color:  #333333;
             top: 0;
             width: 100%;
             height: 100%;
+            &__text {
+                margin: 0;
+                font-size: 13px;
+                text-transform: uppercase;
+                @media only screen and (max-width: $break-point12) {
+                    font-size: 12px;
+                    margin-left: 2.4em;
+                    text-align: left;
+                }
+            }
         }
         p {
             margin-top: 40px;
             font-size: 1.4em;
             @media only screen and (max-width: $break-point9) {
                 margin: 0;
+
             }
         }
         .cross {
