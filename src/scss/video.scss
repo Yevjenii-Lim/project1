@@ -2,8 +2,8 @@
     background-color: #E6E6E6;
     padding: 1em;
     padding-bottom: 3.5em;
-    .title {
-        font-size: 1.5em;
+    @media only screen and (max-width: $break-point12) {
+        padding-bottom: 35px;
     }
     &__frame {
         width: 100%;

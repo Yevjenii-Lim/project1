@@ -1,6 +1,6 @@
-import Swiper from 'swiper';
+// import Swiper from 'swiper';
 import "./scss/styles.scss";
-import 'swiper/swiper-bundle.css';
+// import 'swiper/swiper-bundle.css';
 import $ from "jquery";
 
 let burger = document.querySelector('.burger')
@@ -53,6 +53,23 @@ var swiper = new Swiper('.swiper-container', {
       el: '.swiper-pagination',
       clickable: true,
     },
+   
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  var swiper = new Swiper('.swiper-service', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+   
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -76,12 +93,6 @@ function openMobileMore(event) {
     </svg></p>
     `).prependTo(innerList).on('click', closeInnerList)
     innerList.addClass('inner-list-item')
-    if(text == "Tiervermittlung")
-        mobileList.after(innerList)
-        innerList.after(innerList3)
-        mobileList.animate({
-            left:'-100%'
-        })
     
     if(text == 'Tierklinik') {
         mobileList.after(innerList)
@@ -90,6 +101,14 @@ function openMobileMore(event) {
             left:'-100%'
         })
     }
+    if(text == "Tiervermittlung")
+        mobileList.after(innerList)
+        innerList.after(innerList3)
+        mobileList.animate({
+            left:'-100%'
+        })
+    
+ 
 
 }
 

@@ -1,5 +1,5 @@
 .meta-info {
-    padding: 5em 0;
+    padding: 40px 0;
     .container {
         display: flex;
         justify-content: space-between;
@@ -29,7 +29,7 @@
                 justify-content: center;
                 background-color: #FFDD0B;
                 border-radius: 50%;
-                margin-right: 30px;
+                margin-right: 20px;
             }
         }
         .text {
@@ -39,6 +39,9 @@
             background-color: #FFDD0B;
             padding: 1em 2em;
             font-weight: bold;
+            @media only screen and (max-width: $break-point9) {
+                width: 100%;
+            }
         }
     }
 }

@@ -29,12 +29,15 @@
     }
     .list-group {
         display: flex;
+        justify-content: space-between;
+        width: 100%;
         @media only screen and (max-width: $break-point10) {
             flex-direction: column;
             align-items: center;
         }
         .inner-group {
             display: flex;
+            width: 50%;
             @media only screen and (max-width: $break-point10) {
                 width: 100%;
             }
@@ -48,6 +51,9 @@
     .numbers {
         margin-top: 2em;
         margin-bottom: 5em;
+        @media only screen and (max-width: $break-point4) {
+            margin-bottom: 0;
+        }
     }
     .bottom {
         display: flex;
@@ -61,8 +67,9 @@
         }
     }
     .services-list {
+        width: 100%;
         @media only screen and (max-width: $break-point4) {
-            width: 50%;
+            width: 100%;
         }
         li {
             margin: 0.8em 0;
@@ -72,7 +79,7 @@
         }
     }
     .partners {
-        border-left: 1px solid grey;
+        border-left: 2px solid #FFFFFF;
         padding-left: 2em;
         margin-top: 1em;
         display: flex;
@@ -83,8 +90,9 @@
         @media only screen and (max-width: $break-point4) {
             flex-direction: row;
             border-left: none;
-            border-top: 1px solid grey;
+            border-top: 2px solid #FFFFFF;
             padding-top: 1em;
+            padding-left: 0;
         }
         .title-partner{
             margin-top: 0;

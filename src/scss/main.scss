@@ -11,6 +11,7 @@
 body {
     margin: 0;
 }
+
 .overLay {
     position: fixed;
     width: 100%;
@@ -20,6 +21,31 @@ body {
     opacity: 0.5;
     z-index: 10;
     display: none;
+}
+.title {
+    @media only screen and (max-width: $break-point8) {
+        font-size: 24px;
+    }
+    @media only screen and (max-width: $break-point12) {
+        font-size: 20px;
+    }
+}
+.subtitle {
+    @media only screen and (max-width: $break-point8) {
+        font-size: 17px;
+    }
+    @media only screen and (max-width: $break-point12) {
+        font-size: 16px;
+    }
+}
+.text {
+    @media only screen and (max-width: $break-point8) {
+        font-size: 13px;
+    }
+    @media only screen and (max-width: $break-point12) {
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
 .mobileMenu {
     z-index: 101;
@@ -48,6 +74,10 @@ body {
         align-items: center;
         .close {
             align-self: flex-start;
+        }
+        img {
+            width: 156px;
+            height: 80px;
         }
     }
     &__nav-list {
@@ -127,6 +157,7 @@ body {
         }
         .list__div {
             margin-left: 10px;   
+            font-size: 13px;
         }
         .item {
             background-color: #333333;
@@ -183,7 +214,7 @@ body {
         max-width: 800px;
     }
     @media only screen and (max-width: $break-point8) {
-        max-width: 760px;
+        max-width: 710px;
     }
     @media only screen and (max-width: $break-point9) {
         max-width: 680px;
@@ -207,7 +238,7 @@ body {
         max-width: 350px;
     }  
     @media only screen and (max-width: $break-point16) {
-        max-width: 300px;
+        max-width: 290px;
     }
 }
 header {
@@ -251,6 +282,7 @@ header {
     
         .list__div {
             margin-left: 10px;
+            font-size: 13px;
             p {
                 margin: 0;
             }
@@ -276,7 +308,7 @@ header {
     margin-bottom: 1.4em;
     padding-top: 5em;
     @media only screen and (max-width: $break-point9) {
-        padding-top: 15px;
+        padding-top: 5px;
     }
     .container {
         display: flex;
@@ -292,6 +324,12 @@ header {
     .logo-wrap {
         @media only screen and (max-width: $break-point4) {
             margin-left: auto;
+        }
+        img {
+            @media only screen and (max-width: $break-point8) {
+                width: 117px;
+                height: 60px;
+            }
         }
     }
     .nav {
@@ -386,7 +424,6 @@ header {
     text-align: center;
     font-size: 18px;
     background: #fff;
-
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -402,15 +439,46 @@ header {
     align-items: center;
   }
 
+  .swiper-scrollbar {
+      display: none;
+  }
+  .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+	position: absolute;
 
+    bottom: 20%;
+    margin: 0;
+}
+
+.swiper-pagination-bullet-active {
+	color:#fff;
+    background: white;
+    width: 100%;
+}
+.swiper-service {
+    width: 100%;
+}
+.swiper-service {
+    
+    .content {
+        width: 100%;
+        background-color: yellow;
+    }
+}
 .services {
     margin-bottom: 5em;
+    @media only screen and (max-width: $break-point8) {
+        margin-bottom: 3em;
+    }
+    @media only screen and (max-width: $break-point12) {
+        margin-bottom:  35px;
+    }
     .container {
         display: flex;
         justify-content: space-between;
         @media only screen and (max-width: $break-point9) {
             flex-direction: column;
             align-items: center;
+            margin-top: 20px;
         }
     }
     &__item {
@@ -427,12 +495,17 @@ header {
         z-index: 1;
         @media only screen and (max-width: $break-point3) {
             width: 170px;
-            margin-top: -60px;
-          
+            margin-top: -60px; 
         }
+      
      
         @media only screen and (max-width: $break-point6) {
             width: 150px;
+        }
+        @media only screen and (max-width: $break-point8) {
+            width: 130px;
+            height: 200px;
+            margin-top: -35px;
         }
         @media only screen and (max-width: $break-point9) {
             margin-top: 10px;
@@ -455,8 +528,10 @@ header {
                     width: 30px;
                 }
             }
-            p {
+            .name {
                 margin-top: 0;
+                text-transform: uppercase;
+                font-weight: bold;
             }
         }
         .more {
@@ -473,21 +548,26 @@ header {
             height: 100%;
             &__text {
                 margin: 0;
-                font-size: 13px;
-                text-transform: uppercase;
-                @media only screen and (max-width: $break-point12) {
+                font-size: 16px;
+       
+                @media only screen and (max-width: $break-point9) {
                     font-size: 12px;
                     margin-left: 2.4em;
                     text-align: left;
+                }
+                @media only screen and (max-width: $break-point9) {
+                    text-transform: uppercase;
                 }
             }
         }
         p {
             margin-top: 40px;
             font-size: 1.4em;
+            @media only screen and (max-width: $break-point8) {
+                font-size: 14px;
+            }
             @media only screen and (max-width: $break-point9) {
                 margin: 0;
-
             }
         }
         .cross {
